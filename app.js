@@ -68,6 +68,6 @@ app.post("/failure", function(req, res){
 
 
 
-const server = app.listen(process.env.port, function () {
-    console.log("Server On"+ server.address().port);
+app.listen(process.env.PORT || 3000, function () {
+    console.log("Server On"+ this.address().port);
 });
